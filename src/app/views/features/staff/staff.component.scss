@@ -1,0 +1,129 @@
+/* General Styling */
+
+/* Container for the form, centers it and adds padding, background, and box shadow */
+.form-container {
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 40px; /* Add padding around the form */
+  padding-left: 80px; /* Add extra left padding */
+  padding-right: 80px; /* Add extra right padding */
+  background-color: #f9f9f9; /* Light grey background color */
+  border-radius: 8px; /* Round the corners of the container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow to the container */
+}
+
+/* Style for the main heading (h2) */
+h2 {
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px; /* Add margin below the heading */
+  font-size: 24px; /* Set font size */
+  color: #333; /* Set text color */
+}
+
+/* Style for form groups to provide space between elements */
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Style for form labels */
+label {
+  font-weight: 600; /* Make label text bold */
+  font-size: 20px; /* Set font size */
+  color: #3F4254; /* Dark grey color for labels */
+  margin-bottom: 8px; /* Space below the label */
+}
+
+/* Style for form input fields */
+.form-input {
+  width: 100%; /* Make the input field take full width */
+  padding: 8px; /* Padding inside the input field */
+  padding-right: 0px; /* Remove right padding */
+  font-size: 14px; /* Set font size */
+  border: 1px solid #000000; /* Black border */
+  border-radius: 12px; /* Rounded corners for the input field */
+  background-color: #fff; /* White background */
+}
+
+/* Style for input fields when focused */
+.form-input:focus {
+  border-color: #007bff; /* Change border color to blue on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); /* Add subtle blue glow effect */
+}
+
+/* Style for error message text */
+.error-message {
+  color: #e74c3c; /* Red color for error messages */
+  font-size: 15px; /* Set font size */
+  margin-top: 5px; /* Space above the error message */
+}
+
+/* Style for general button */
+.btn {
+  width: 30%; /* Set the button width to 30% of the parent container */
+  padding: 10px; /* Add padding inside the button */
+  background-color: #007bff; /* Set button background color to blue */
+  color: #fff; /* Set text color to white */
+  font-size: 16px; /* Set font size */
+  font-weight: 600; /* Make the text bold */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Round the corners of the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-family: 'Raleway'; /* Use the 'Raleway' font */
+}
+
+/* Style for disabled buttons */
+.btn:disabled {
+  background-color: #ccc; /* Set grey background color */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+/* Flexbox styling to center the button container */
+.btn-div {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the button horizontally */
+}
+
+/* Style for the attendance button */
+.go-attendance-btn {
+  font-family: 'Raleway'; /* Use the 'Raleway' font */
+  width: 30%; /* Set the button width to 30% */
+  padding: 10px; /* Add padding inside the button */
+  background-color: #39ac31; /* Green background for the button */
+  color: #fff; /* White text color */
+  font-size: 16px; /* Set font size */
+  font-weight: 600; /* Bold text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 20px; /* Add space to the left of the button */
+}
+
+/* Style for the arrow icon inside the attendance button */
+.go-attendance-btn .arrow {
+  font-size: 18px; /* Set size of the arrow */
+}
+
+/* Style for hover effect on the attendance button */
+.go-attendance-btn:hover {
+  background-color: #009957; /* Darken the background on hover */
+}
+
+/* Responsive Styling */
+
+/* Styling adjustments for small screen sizes (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Reduce padding for form container on small screens */
+  .form-container {
+    padding: 15px; /* Reduced padding */
+  }
+
+  /* Reduce font size for the heading */
+  h2 {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  /* Reduce font size for the button on small screens */
+  .btn {
+    font-size: 14px; /* Smaller button text */
+  }
+}

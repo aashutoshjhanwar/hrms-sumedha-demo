@@ -1,0 +1,110 @@
+/*======================
+  404 Page Styling
+========================*/
+
+/* Container for the entire 404 page */
+.page_404 {
+    padding: 40px 0;
+    background: #fff;
+    font-family: "Arvo", serif; /* Font for the page */
+  }
+  
+  /* Container to center content and restrict width */
+  .page_404 .container {
+    max-width: 960px;
+    margin: 0 auto; /* Centers the container */
+  }
+  
+  /* Background for the 404 error, with an image */
+  .four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: contain; /* Ensures the image fits within the container */
+  }
+  
+  /* Style for the "404" text */
+  .four_zero_four_bg h1 {
+    font-size: 100px; /* Large size for visibility */
+    color: #fff;
+    line-height: 400px; /* Vertically center the "404" within the div */
+    margin: 0;
+    font-family: 'Raleway'; /* Font for the 404 text */
+  }
+  
+  /* Box containing the error message */
+  .content_box_404 {
+    margin-top: 20px;
+  }
+  
+  /* Title for the error message */
+  .content_box_404 h3 {
+    font-size: 24px;
+    font-family: 'Raleway';
+    margin: 20px 0;
+    text-align: center; /* Center align the title */
+  }
+  
+  /* Message explaining the error */
+  .content_box_404 p {
+    font-size: 18px;
+    font-family: 'Raleway';
+    color: #555; /* Soft gray text */
+    text-align: center; /* Center align the text */
+  }
+  
+  /* Style for the link that redirects to the home page */
+  .link_404 {
+    color: #fff !important; /* Ensure text is white */
+    padding: 10px 25px;
+    background: #39ac31; /* Green background */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none; /* Remove underline */
+    font-size: 18px;
+    transition: 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  /* Hover effect for the link */
+  .link_404:hover {
+    background: #2c8b28; /* Darker green on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Center-align the "Go to Home" button */
+  .go-to-home {
+    text-align: center;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    /* Resize the "404" text for smaller screens */
+    .four_zero_four_bg h1 {
+      font-size: 60px;
+      line-height: 300px;
+    }
+  
+    /* Reduce the background height for smaller screens */
+    .four_zero_four_bg {
+      height: 300px;
+    }
+  
+    /* Adjust font size for the error message title */
+    .content_box_404 h3 {
+      font-size: 20px;
+    }
+  
+    /* Adjust font size for the explanatory message */
+    .content_box_404 p {
+      font-size: 16px;
+    }
+  
+    /* Adjust link size and padding for mobile */
+    .link_404 {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  }
+  

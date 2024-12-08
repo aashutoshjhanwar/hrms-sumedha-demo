@@ -1,0 +1,28 @@
+<form [formGroup]="employeeForm" (ngSubmit)="addEmployee()" class="form-container">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" class="form-input" />
+    <!-- Error message for invalid 'name' input -->
+    <div *ngIf="employeeForm.controls['name'].invalid && employeeForm.controls['name'].touched" class="error-message">
+      <small>Name is required</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="mobile">Mobile No.</label>
+    <input type="tel" maxlength="10" id="mobile" formControlName="mobile" class="form-input" />
+    <!-- Error message for invalid 'mobile' input -->
+    <div *ngIf="employeeForm.controls['mobile'].invalid && employeeForm.controls['mobile'].touched" class="error-message">
+      <small>Mobile is required (10 digits).</small>
+    </div>
+  </div>
+
+  <div class="btn-div">
+    <!-- Submit button to add the staff -->
+    <button type="submit" class="btn">Add Staff</button>
+    <!-- Button to navigate to attendance page -->
+    <button type="button" (click)="goToAttendance()" class="go-attendance-btn">
+      Go to Attendance <span class="arrow">→</span>
+    </button>
+  </div>
+</form>

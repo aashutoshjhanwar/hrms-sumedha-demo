@@ -1,0 +1,43 @@
+<div class="footer-menu">
+    <ul>
+      <li [class.active]="isActive('staff')">
+        <a (click)="navigateTo('staff')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
+            <path d="M18.5 14c2.683 0 4.5-2.183 4.5-4.5S21.183 5 18.5 5 14 7.183 14 9.5 15.817 14 18.5 14Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22.17 17.64a6 6 0 0 0-8.34 0" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.5 14c2.683 0 4.5-2.183 4.5-4.5S12.183 5 9.5 5 5 7.183 5 9.5 6.817 14 9.5 14Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.17 17.64a6 6 0 0 0-8.34 0" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Staff</span>
+        </a>
+      </li>
+      <li [class.active]="isActive('attendance')">
+        <a (click)="navigateTo('attendance')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="12" stroke="#667085" stroke-width="2"/>
+            <path d="M14 7V14L18 17" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Attendance</span>
+        </a>
+      </li>
+      <li [class.active]="isActive('referral')">
+        <a (click)="navigateTo('referral')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="12" stroke="#667085" stroke-width="2"/>
+            <path d="M10 14H18M14 10V18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Referral</span>
+        </a>
+      </li>
+      <li [class.active]="isActive('profile')">
+        <a (click)="navigateTo('profile')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="10" r="4" stroke="#667085" stroke-width="2"/>
+            <path d="M8 20C8 16.686 10.686 14 14 14C17.314 14 20 16.686 20 20" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  

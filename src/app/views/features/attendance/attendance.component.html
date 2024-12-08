@@ -1,0 +1,78 @@
+<!-- Calendar container with navigation buttons and date display -->
+<div class="calendar-container">
+  <div class="calendar-header">
+    <!-- Button to navigate to the previous day -->
+    <button (click)="previousDay()" class="nav-button">‹</button>
+    
+    <!-- Display selected date in a readable format -->
+    <div class="date-display">{{ selectedDate | date: 'EEEE, d MMMM y' }}</div>
+    
+    <!-- Button to navigate to the next day -->
+    <button (click)="nextDay()" class="nav-button">›</button>
+  </div>
+
+  <!-- Attendance summary section -->
+  <div class="attendance-summary">
+    <!-- Display count of Present employees -->
+    <div class="summary-item present">
+      <h3>Present (P)</h3>
+      <p>{{ getAttendanceSummary().present }}</p>
+    </div>
+    
+    <!-- Display count of Absent employees -->
+    <div class="summary-item absent">
+      <h3>Absent (A)</h3>
+      <p>{{ getAttendanceSummary().absent }}</p>
+    </div>
+    
+    <!-- Display count of Half-Day employees -->
+    <div class="summary-item half-day">
+      <h3>Half Day</h3>
+      <p>{{ getAttendanceSummary().halfDay }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Employee attendance container that shows the list of employees -->
+<div *ngIf="employees.length > 0" class="attendance-container">
+  <!-- Heading showing the total number of employees -->
+  <h2>Monthly Staff ({{ employees.length }})</h2>
+  
+  <!-- List of employees with attendance buttons -->
+  <div class="employee-list">
+    <div *ngFor="let employee of employees" class="employee-item">
+      
+      <!-- Display employee name and ID -->
+      <div class="employee-details">
+        <h4>{{ employee.name }}</h4>
+        <p>Employee ID: {{ employee.id }}</p>
+      </div>
+      
+      <!-- Attendance buttons with conditional styling based on attendance status -->
+      <div class="attendance-buttons">
+        <!-- Present button that activates if the employee's attendance is marked as "Present" -->
+        <button class="present" [class.active]="getEmployeeAttendance(employee.id) === 'Present'"
+          (click)="markAttendance(employee.id, 'Present')">
+          Present
+        </button>
+        
+        <!-- Absent button that activates if the employee's attendance is marked as "Absent" -->
+        <button class="absent" [class.active]="getEmployeeAttendance(employee.id) === 'Absent'"
+          (click)="markAttendance(employee.id, 'Absent')">
+          Absent
+        </button>
+        
+        <!-- Half-Day button that activates if the employee's attendance is marked as "Half-Day" -->
+        <button class="half-day" [class.active]="getEmployeeAttendance(employee.id) === 'Half-Day'"
+          (click)="markAttendance(employee.id, 'Half-Day')">
+          Half Day
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- If there are no employees, display the "No Data Found" component -->
+<div *ngIf="employees.length == 0">
+  <app-no-data-found></app-no-data-found>
+</div>
