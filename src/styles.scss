@@ -3,14 +3,6 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
 .footer-menu {
     display: block;
     position: fixed;
@@ -61,6 +53,11 @@ ul:not(.browser-default) {
   font-weight: bold;
 }
 
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+    font-size: 16px;
+}
 
 
 .header {
